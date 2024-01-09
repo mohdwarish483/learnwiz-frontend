@@ -17,6 +17,7 @@ import axios from 'axios';
 const Subscriber = () => {
   const dispatch = useDispatch();
   const [key, setKey] = useState('');
+  console.log('calling key', key);
 
   // subscribed handler
   const subscribedHandler = async () => {
