@@ -12,9 +12,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import cursor from '../../../assets/images/cursor.png';
 import { createCourse } from '../../../redux/actions/admin';
-import { fileCss, fileUploadCss } from '../../Auth/Register';
+import { fileCss} from '../../Auth/Register';
 import Sidebar from '../Sidebar';
 import toast from 'react-hot-toast';
 

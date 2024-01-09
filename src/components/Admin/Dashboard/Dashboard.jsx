@@ -1,22 +1,17 @@
 import {
   Box,
-  Flex,
   Grid,
   Heading,
   HStack,
   Progress,
   Stack,
   Text,
-  VStack,
+
 } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { RiArrowDownLine, RiArrowUpLine } from 'react-icons/ri';
-import cursor from '../../../assets/images/cursor.png';
 import Sidebar from '../Sidebar';
 import { DoughnutChart, LineChart } from './chart';
-import { useDispatch, useSelector } from 'react-redux';
-import { getDashboardStats } from '../../../redux/actions/admin';
-import Loader from '../../Layout/Loader/Loader';
 
 const Databox = ({ title, qty, qtyPercentage, profit }) => (
   <Box

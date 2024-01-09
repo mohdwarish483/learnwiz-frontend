@@ -15,21 +15,15 @@ import {
   Flex,
   Avatar,
   Box,
-  IconButton,
-  StepSeparator,
 } from '@chakra-ui/react';
 import '.././Home/home.css';
 import { Rating } from 'react-simple-star-rating';
-import { RiChatNewLine, RiPlayListAddLine } from 'react-icons/ri';
+import { RiPlayListAddLine } from 'react-icons/ri';
 import React, { useEffect, useState } from 'react';
-import web from '../../assets/images/webdev.jpg';
 import { Link } from 'react-router-dom';
-import { buttonStyles } from '../Layout/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCourses } from '../../redux/actions/course';
 import { toast } from 'react-toastify';
-import { Line } from 'react-chartjs-2';
-import { SiBreaker } from 'react-icons/si';
 import { addToPlaylist } from '../../redux/actions/profile';
 import { loadUser } from '../../redux/actions/user';
 

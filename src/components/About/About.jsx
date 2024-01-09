@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import homevideo from '../../assets/videos/intro2.mp4';
-import myprofile from '../../assets/images/myprofile.png';
 import { Link } from 'react-router-dom';
 import { RiSecurePaymentFill } from 'react-icons/ri';
 import termsAndCondition from '../../assets/docs/termsAndCondition';
