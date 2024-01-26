@@ -109,7 +109,6 @@ const Header = ({ isAuthenticated = false, user }) => {
               rounded={'full'}
               width={'120px'}
             >
-              {' '}
               <HStack justifyContent={'space-around'}>
                 <RiLogoutBoxLine />
                 <span>Logout</span>
@@ -119,7 +118,6 @@ const Header = ({ isAuthenticated = false, user }) => {
         ) : (
           <>
             <Link to={'/login'}>
-              {' '}
               <Button
                 className="shady"
                 colorScheme="messenger"

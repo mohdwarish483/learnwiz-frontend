@@ -109,7 +109,7 @@ const Footer = () => {
           justifyContent={['center', 'space-around']}
           alignItems={'center'}
         >
-          <Text>© 2023 LearnFlix. All Rights Reserved</Text>
+          <Text>© 2023-24 LearnWiz. All Rights Reserved</Text>
           <HStack
             color={'white'}
             fontSize={'40'}

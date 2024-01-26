@@ -15,6 +15,7 @@ import {
   Flex,
   Avatar,
   Box,
+  Spinner,
 } from '@chakra-ui/react';
 import '.././Home/home.css';
 import { Rating } from 'react-simple-star-rating';
@@ -39,7 +40,6 @@ const CourseCard = ({
   description,
   lectureCount,
   price,
-  avtar,
   loading,
 }) => {
   const [rating, setRating] = useState(0); // initial rating value
@@ -241,34 +241,51 @@ const Courses = () => {
               </Button>
             ))}
           </HStack>
-          <Stack
-            direction={['column', 'row']}
-            flexWrap={'wrap'}
-            justifyContent={['flex-start', 'space-evenly']}
-            alignItems={['center', 'flex-start']}
-          >
-            {courses.length > 0 ? (
-              courses.map(item => (
-                <CourseCard
-                  key={item._id}
-                  title={item.title}
-                  description={item.description}
-                  imageSrc={item.poster.url}
-                  id={item._id}
-                  creator={item.createdBy}
-                  lectureCount={item.numOfVideos}
-                  views={item.views}
-                  playlistHandler={addToplaylistHandler}
-                  loading={loading}
-                  price={299}
-                />
-              ))
-            ) : (
-              <Heading opacity={'0.8'} mt={'8'}>
-                No Course Found Matching With Your Search
-              </Heading>
-            )}
-          </Stack>
+          {loading ? (
+            <Flex
+              alignItems={'center'}
+              width={'100%'}
+              justifyContent={'center'}
+              py={'32'}
+            >
+              <Spinner
+                thickness="4px"
+                speed="0.65s"
+                emptyColor="gray.200"
+                color={`var(--primary-btn-color)`}
+                size="xl"
+              />
+            </Flex>
+          ) : (
+            <Stack
+              direction={['column', 'row']}
+              flexWrap={'wrap'}
+              justifyContent={['flex-start', 'space-evenly']}
+              alignItems={['center', 'flex-start']}
+            >
+              {courses.length > 0 ? (
+                courses.map(item => (
+                  <CourseCard
+                    key={item._id}
+                    title={item.title}
+                    description={item.description}
+                    imageSrc={item.poster.url}
+                    id={item._id}
+                    creator={item.createdBy}
+                    lectureCount={item.numOfVideos}
+                    views={item.views}
+                    playlistHandler={addToplaylistHandler}
+                    loading={loading}
+                    price={299}
+                  />
+                ))
+              ) : (
+                <Heading opacity={'0.8'} mt={'8'}>
+                  No Course Found Matching With Your Search
+                </Heading>
+              )}
+            </Stack>
+          )}
         </Container>
       </Stack>
     </>
