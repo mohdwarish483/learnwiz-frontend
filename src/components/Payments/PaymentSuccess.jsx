@@ -8,7 +8,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import animationData from '../../assets/images/Animation - 1706386259441.json';
 import Lottie from 'react-lottie';
