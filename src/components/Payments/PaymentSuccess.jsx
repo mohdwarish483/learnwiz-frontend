@@ -3,62 +3,35 @@ import {
   Button,
   Container,
   Heading,
-  Link,
   Stack,
   Text,
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
-import { RiCheckboxCircleLine } from 'react-icons/ri';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
+import animationData from '../../assets/images/Animation - 1706386259441.json';
+import Lottie from 'react-lottie';
+
 function PaymentSuccess() {
+  const location = useLocation();
+
+  const searchObject = new URLSearchParams(location?.search);
+
+  const referenceId = searchObject?.get('reference');
+
+  const navigate = useNavigate();
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
   return (
-    // <Stack className="backcolor" height={'100vh'}>
-    //   <Container height={'90vh'} p={16}>
-    //     <Heading my={8} textAlign={'center'}>
-    //       You Got Pro Pack
-    //     </Heading>
-    //     <VStack
-    //       pb={'8'}
-    //       backgroundColor={'white'}
-    //       boxShadow={'lg'}
-    //       alignItems={'center'}
-    //       borderRadius={'lg'}
-    //     >
-    //       <Box
-    //         p={4}
-    //         css={{ borderRadius: '8px 8px 0 0' }}
-    //         width={'full'}
-    //         bg={'green'}
-    //       >
-    //         <Text color={'white'} textAlign={'center'} fontWeight={'bold'} fontSize={'xl'}>
-    //           Payment Successful
-    //         </Text>
-    //       </Box>
-    //       <Box p={4}>
-    //         <VStack textAlign={'center'} px={'8'} spacing={'4'}>
-    // <Text>
-    //   Congratulations! you have became a pro member. Now You have
-    //   access to premium content
-    // </Text>
-    // <Heading size={'4xl'}>
-    //   <RiCheckboxCircleLine color="green" />
-    // </Heading>
-    // <Heading size={'xs'}>
-    //   {' '}
-    //   Reference ID : ldfannnnnsLKSLSAl : fndsxcm
-    // </Heading>
-    // <Link to={'/profile'} className="shady" my={'4'}>
-    //   <Button flex={1} size={'md'} colorScheme="messenger">
-    //     Go to Profile
-    //   </Button>
-    // </Link>
-    //         </VStack>
-    //       </Box>
-    //     </VStack>
-    //   </Container>
-    // </Stack>
     <Stack width={'100vw'} className="backcolor" mt={'10vh'}>
-      <Box bg={'rgb(12,120,254)'} width={'100%'} h={'60vh'} zIndex={'10'}>
+      <Box bgColor={'rgb(12,109,254)'} width={'100%'} h={'60vh'} zIndex={'10'}>
         <VStack
           spacing={'6'}
           color={'white'}
@@ -78,55 +51,39 @@ function PaymentSuccess() {
       <Container
         minHeight={'90vh'}
         h={'auto'}
-        mt={'-32'}
+        mt={['-20', '-20', '-24', '-24', '-32']}
         zIndex={'200'}
         pb={'16'}
       >
         <VStack
+          borderRadius={'8'}
           height={'full'}
           justifyContent={'center'}
           spacing={'2'}
           boxShadow={'xl'}
           width={'100%'}
-          p={'16'}
+          p={'8'}
+          pt={'0'}
           bg={'white'}
         >
-          <VStack
-            width={'full'}
-            bgColor={'whatsapp.600'}
-            h={'30vh'}
-            justifyContent={'center'}
-            spacing={'6'}
-            __css={{ clipPath: 'circle(30vh at 50% 0%)' }} // Modified clip path
-          >
-            <Heading textAlign={'center'} color={'white'}>
-              Success
+          <VStack textAlign={'center'} p={'6'} pt={'0'} spacing={'6'}>
+            <Heading size={'xs'} mb={'-16'} mt={'16'}>
+              {referenceId ? `Reference ID : ${referenceId}` : 'No payment'}
             </Heading>
-            <Text
-              color={'white'}
-              textAlign={'center'}
-              fontWeight={'bold'}
-              fontSize={'2xl'}
-            ></Text>
-          </VStack>
-
-          <VStack textAlign={'center'} spacing={'6'} p={'6'}>
-            <Text>
-              Congratulations! you have became a pro member. Now You have access
-              to premium content
+            <Lottie options={defaultOptions} width={'80%'} />
+            <Text marginTop={'-16'}>
+              Congratulations! you have became a pro member. Now You a have
+              access to premium content
             </Text>
-            <Heading size={'4xl'}>
-              <RiCheckboxCircleLine color="green" />
-            </Heading>
-            <Heading size={'xs'}>
-              {' '}
-              Reference ID : ldfannnnnsLKSLSAl : fndsxcm
-            </Heading>
-            <Link to={'/profile'} className="shady" my={'4'}>
-              <Button flex={1} size={'md'} colorScheme={'whatsapp'}>
-                Go to Profile
-              </Button>
-            </Link>
+
+            <Button
+              size={'md'}
+              className="shady"
+              colorScheme="messenger"
+              onClick={() => navigate('/profile')}
+            >
+              Go to Profile
+            </Button>
           </VStack>
         </VStack>
       </Container>

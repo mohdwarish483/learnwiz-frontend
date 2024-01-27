@@ -172,7 +172,7 @@ function App() {
                   isAuthenticated={!isAuthenticated}
                   redirect="/profile"
                 >
-                  <ForgetPassword />{' '}
+                  <ForgetPassword />
                 </ProtectedRoute>
               }
             />
@@ -194,7 +194,7 @@ function App() {
               path="/subscribe"
               element={
                 <ProtectedRoute isAuthenticated={isAuthenticated}>
-                  <Subscriber />
+                  <Subscriber user={user} />
                 </ProtectedRoute>
               }
             />

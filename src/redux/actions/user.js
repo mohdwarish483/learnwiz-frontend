@@ -78,6 +78,10 @@ export const buySubscription = () => async dispatch => {
       withCredentials: true,
     });
 
+    console.log(
+      'calling subscription id response in the buysubscription response'
+    );
+
     dispatch({ type: 'buySubscriptionSuccess', payload: data.subscriptionId });
   } catch (error) {
     dispatch({

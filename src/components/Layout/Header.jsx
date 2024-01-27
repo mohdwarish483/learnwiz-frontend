@@ -125,11 +125,10 @@ const Header = ({ isAuthenticated = false, user }) => {
                 onClick={onClose}
                 rounded={'full'}
               >
-                Login
+                SignIn
               </Button>
             </Link>{' '}
             <Link to={'/register'}>
-              {' '}
               <Button
                 className="shady"
                 colorScheme="messenger"
@@ -223,7 +222,7 @@ const Header = ({ isAuthenticated = false, user }) => {
                         colorScheme="messenger"
                         width={['100px', '110px']}
                       >
-                        Login
+                        SignIn
                       </Button>
                     </Link>{' '}
                     <p>OR</p>
