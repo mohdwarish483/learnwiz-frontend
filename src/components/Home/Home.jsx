@@ -205,7 +205,7 @@ const Home = () => {
         width="100%"
         p={['5', '16']}
         flexDirection="column"
-        spacing={4}
+        spacing={6}
         className={'backcolor'}
         justifyContent={'center'}
       >
@@ -217,7 +217,7 @@ const Home = () => {
           Upskill in web development, machine learning, dsa, business analytics
           and many more.
         </Text>
-        <Stack spacing={'8'}>
+        <Stack spacing={'12'}>
           <Heading
             alignSelf={'center'}
             color={'var(--primary-btn-color)'}

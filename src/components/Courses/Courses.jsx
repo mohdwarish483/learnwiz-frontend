@@ -217,9 +217,10 @@ const Courses = () => {
         >
           <Heading m={'8'}>All Courses</Heading>
           <Input
-            border={'1px solid rgba(0,0,0,0.175)'}
-            shadow={'0px 0px 6px rgba(100,100,100,0.5)'}
+            // border={'1px solid rgba(0,0,0,0.175)'}
+            shadow={'0px 0px 6px rgba(200,200,200,0.5)'}
             type="text"
+            variant={'outline'}
             value={keyword}
             backgroundColor={'white'}
             onChange={e => setKeyword(e.target.value)}
