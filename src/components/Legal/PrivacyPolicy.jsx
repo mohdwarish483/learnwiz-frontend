@@ -3,24 +3,24 @@ import { Box, Heading, Text, VStack, Link } from '@chakra-ui/react';
 
 const PrivacyPolicy = () => {
   return (
-    <Box p="32" className="backcolor" mt={'10vh'}>
+    <Box p={['5', '32']} className="backcolor" mt={'5vh'}>
       <VStack alignItems="flex-start">
         <Heading as="h1" fontSize="5xl" mb="2">
           Privacy Policy
         </Heading>
         <Text fontSize="lg" fontWeight="bold">
-          Updated at 21-05-2023
+          Updated at 21-09-2023
         </Text>
         <Text>
-          LearnUnit (“we,” “our,” or “us”) is committed to protecting your
+          LearnWiz (“we,” “our,” or “us”) is committed to protecting your
           privacy. This Privacy Policy explains how your personal information is
-          collected, used, and disclosed by LearnUnit.
+          collected, used, and disclosed by LearnWiz.
         </Text>
         <Text>
           This Privacy Policy applies to our website, and its associated
           subdomains (collectively, our “Service”) alongside our application,
-          LearnUnit. By accessing or using our Service, you signify that you
-          have read, understood, and agree to our collection, storage, use, and
+          LearnWiz. By accessing or using our Service, you signify that you have
+          read, understood, and agree to our collection, storage, use, and
           disclosure of your personal information as described in this Privacy
           Policy and our Terms of Service.
         </Text>
@@ -62,11 +62,11 @@ const PrivacyPolicy = () => {
           <br />- To send periodic emails
         </Text>
         <Heading as="h2" fontSize="2xl" mt="4">
-          When does LearnUnit use end user information from third parties?
+          When does LearnWiz use end user information from third parties?
         </Heading>
         <Text>
-          LearnUnit will collect End User Data necessary to provide the
-          LearnUnit services to our customers.
+          LearnWiz will collect End User Data necessary to provide the LearnWiz
+          services to our customers.
         </Text>
         <Text>
           End users may voluntarily provide us with information they have made
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
           websites and changing your privacy settings.
         </Text>
         <Heading as="h2" fontSize="2xl" mt="4">
-          Is the information collected through the LearnUnit Service secure?
+          Is the information collected through the LearnWiz Service secure?
         </Heading>
         <Text>
           We take precautions to protect the security of your information. We
@@ -97,8 +97,8 @@ const PrivacyPolicy = () => {
         </Heading>
         <Text>
           The rights you have to request updates or corrections to the
-          information LearnUnit collects depend on your relationship with
-          LearnUnit. Personnel may update or correct their information as
+          information LearnWiz collects depend on your relationship with
+          LearnWiz. Personnel may update or correct their information as
           detailed in our internal company employment policies.
         </Text>
         <Text>

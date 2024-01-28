@@ -3,38 +3,38 @@ import { Box, Heading, Link, Text, VStack } from '@chakra-ui/react';
 
 const TermsAndConditions = () => {
   return (
-    <Box p="32" className="backcolor" mt={'10vh'}>
+    <Box p={['5', '32']} className="backcolor" mt={'5vh'}>
       <VStack alignItems="flex-start" spacing="4">
         <Heading as="h1" fontSize="4xl" mb="4">
           Terms & Conditions
         </Heading>
         <Text fontSize="lg" fontWeight="bold">
-          Updated at 2021-02-14
+          Updated at 25-09-2023
         </Text>
         <Heading as="h2" fontSize="2xl">
           General Terms
         </Heading>
         <Text>
-          By accessing and placing an order with LearnUnit, you confirm that you
+          By accessing and placing an order with LearnWiz, you confirm that you
           are in agreement with and bound by the terms of service contained in
           the Terms & Conditions outlined below. These terms apply to the entire
           website and any email or other type of communication between you and
-          LearnUnit.
+          LearnWiz.
         </Text>
         <Text>
-          Under no circumstances shall LearnUnit team be liable for any direct,
+          Under no circumstances shall LearnWiz team be liable for any direct,
           indirect, special, incidental or consequential damages, including, but
           not limited to, loss of data or profit, arising out of the use, or the
-          inability to use, the materials on this site, even if LearnUnit team
-          or an authorized representative has been advised of the possibility of
+          inability to use, the materials on this site, even if LearnWiz team or
+          an authorized representative has been advised of the possibility of
           such damages. If your use of materials from this site results in the
           need for servicing, repair or correction of equipment or data, you
           assume any costs thereof.
         </Text>
         <Text>
-          LearnUnit will not be responsible for any outcome that may occur
-          during the course of usage of our resources. We reserve the rights to
-          change prices and revise the resources usage policy in any moment.
+          LearnWiz will not be responsible for any outcome that may occur during
+          the course of usage of our resources. We reserve the rights to change
+          prices and revise the resources usage policy in any moment.
         </Text>
         <Heading as="h2" fontSize="2xl">
           Restrictions
@@ -48,14 +48,14 @@ const TermsAndConditions = () => {
           - Modify, make derivative works of, disassemble, decrypt, reverse
           compile or reverse engineer any part of the website.
           <br />- Remove, alter or obscure any proprietary notice (including any
-          notice of copyright or trademark) of LearnUnit or its affiliates,
+          notice of copyright or trademark) of LearnWiz or its affiliates,
           partners, suppliers or the licensors of the website.
         </Text>
         <Heading as="h2" fontSize="2xl">
           Modifications to Our website
         </Heading>
         <Text>
-          LearnUnit reserves the right to modify, suspend or discontinue,
+          LearnWiz reserves the right to modify, suspend or discontinue,
           temporarily or permanently, the website or any service to which it
           connects, with or without notice and without liability to you.
         </Text>
@@ -63,14 +63,13 @@ const TermsAndConditions = () => {
           Updates to Our website
         </Heading>
         <Text>
-          LearnUnit may from time to time provide enhancements or improvements
-          to the features/ functionality of the website, which may include
-          patches, bug fixes, updates, upgrades and other modifications
-          ("Updates").
+          LearnWiz may from time to time provide enhancements or improvements to
+          the features/ functionality of the website, which may include patches,
+          bug fixes, updates, upgrades and other modifications ("Updates").
         </Text>
         <Text>
           Updates may modify or delete certain features and/or functionalities
-          of the website. You agree that LearnUnit has no obligation to (i)
+          of the website. You agree that LearnWiz has no obligation to (i)
           provide any Updates, or (ii) continue to provide or enable any
           particular features and/or functionalities of the website to you.
         </Text>
@@ -89,10 +88,10 @@ const TermsAndConditions = () => {
           ("Third- Party Services").
         </Text>
         <Text>
-          You acknowledge and agree that LearnUnit shall not be responsible for
+          You acknowledge and agree that LearnWiz shall not be responsible for
           any Third-Party Services, including their accuracy, completeness,
           timeliness, validity, copyright compliance, legality, decency, quality
-          or any other aspect thereof. LearnUnit does not assume and shall not
+          or any other aspect thereof. LearnWiz does not assume and shall not
           have any liability or responsibility to you or any other person or
           entity for any Third-Party Services.
         </Text>
@@ -106,16 +105,16 @@ const TermsAndConditions = () => {
         </Heading>
         <Text>
           This Agreement shall remain in effect until terminated by you or
-          LearnUnit.
+          LearnWiz.
         </Text>
         <Text>
-          LearnUnit may, in its sole discretion, at any time and for any or no
+          LearnWiz may, in its sole discretion, at any time and for any or no
           reason, suspend or terminate this Agreement with or without prior
           notice.
         </Text>
         <Text>
           This Agreement will terminate immediately, without prior notice from
-          LearnUnit, in the event that you fail to comply with any provision of
+          LearnWiz, in the event that you fail to comply with any provision of
           this Agreement. You may also terminate this Agreement by deleting the
           website and all copies thereof from your computer.
         </Text>
@@ -124,7 +123,7 @@ const TermsAndConditions = () => {
           website and delete all copies of the website from your computer.
         </Text>
         <Text>
-          Termination of this Agreement will not limit any of LearnUnit's rights
+          Termination of this Agreement will not limit any of LearnWiz's rights
           or remedies at law or in equity in case of breach by you (during the
           term of this Agreement) of any of your obligations under the present
           Agreement.
@@ -152,31 +151,31 @@ const TermsAndConditions = () => {
         <Text>
           The website is provided to you "AS IS" and "AS AVAILABLE" and with all
           faults and defects without warranty of any kind. To the maximum extent
-          permitted under applicable law, LearnUnit, on its own behalf and on
+          permitted under applicable law, LearnWiz, on its own behalf and on
           behalf of its affiliates and its and their respective licensors and
           service providers, expressly disclaims all warranties, whether
           express, implied, statutory or otherwise, with respect to the website,
           including all implied warranties of merchantability, fitness for a
           particular purpose, title and non-infringement, and warranties that
           may arise out of course of dealing, course of performance, usage or
-          trade practice. Without limitation to the foregoing, LearnUnit
-          provides no warranty or undertaking, and makes no representation of
-          any kind that the website will meet your requirements, achieve any
-          intended results, be compatible or work with any other software,
-          systems or services, operate without interruption, meet any
-          performance or reliability standards or be error free or that any
-          errors or defects can or will be corrected.
+          trade practice. Without limitation to the foregoing, LearnWiz provides
+          no warranty or undertaking, and makes no representation of any kind
+          that the website will meet your requirements, achieve any intended
+          results, be compatible or work with any other software, systems or
+          services, operate without interruption, meet any performance or
+          reliability standards or be error free or that any errors or defects
+          can or will be corrected.
         </Text>
         <Text>
-          Without limiting the foregoing, neither LearnUnit nor any LearnUnit's
+          Without limiting the foregoing, neither LearnWiz nor any LearnWiz's
           provider makes any representation or warranty of any kind, express or
           implied: (i) as to the operation or availability of the website, or
           the information, content, and materials or products included thereon;
           (ii) that the website will be uninterrupted or error-free; (iii) as to
           the accuracy, reliability, or currency of any information or content
           provided through the website; or (iv) that the website, its servers,
-          the content, or e-mails sent from or on behalf of LearnUnit are free
-          of viruses, scripts, trojan horses, worms, malware, timebombs or other
+          the content, or e-mails sent from or on behalf of LearnWiz are free of
+          viruses, scripts, trojan horses, worms, malware, timebombs or other
           harmful components.
         </Text>
         <Text>
@@ -190,20 +189,20 @@ const TermsAndConditions = () => {
         </Heading>
         <Text>
           Notwithstanding any damages that you might incur, the entire liability
-          of LearnUnit and any of its suppliers under any provision of this
+          of LearnWiz and any of its suppliers under any provision of this
           Agreement and your exclusive remedy for all of the foregoing shall be
           limited to the amount actually paid by you for the website.
         </Text>
         <Text>
           To the maximum extent permitted by applicable law, in no event shall
-          LearnUnit or its suppliers be liable for any special, incidental,
+          LearnWiz or its suppliers be liable for any special, incidental,
           indirect, or consequential damages whatsoever (including, but not
           limited to, damages for loss of profits, for loss of data or other
           information, for business interruption, for personal injury, for loss
           of privacy arising out of or in any way related to the use of or
           inability to use the website, third-party software and/or third-party
           hardware used with the website, or otherwise in connection with any
-          provision of this Agreement), even if LearnUnit or any supplier has
+          provision of this Agreement), even if LearnWiz or any supplier has
           been advised of the possibility of such damages and even if the remedy
           fails of its essential purpose.
         </Text>
@@ -216,7 +215,7 @@ const TermsAndConditions = () => {
           Amendments to this Agreement
         </Heading>
         <Text>
-          LearnUnit reserves the right, at its sole discretion, to modify or
+          LearnWiz reserves the right, at its sole discretion, to modify or
           replace this Agreement at any time. If a revision is material we will
           provide at least 30 days' notice prior to any new terms taking effect.
           What constitutes a material change will be determined at our sole
@@ -225,20 +224,20 @@ const TermsAndConditions = () => {
         <Text>
           By continuing to access or use our website after any revisions become
           effective, you agree to be bound by the revised terms. If you do not
-          agree to the new terms, you are no longer authorized to use LearnUnit.
+          agree to the new terms, you are no longer authorized to use LearnWiz.
         </Text>
         <Heading as="h2" fontSize="2xl">
           Entire Agreement
         </Heading>
         <Text>
           The Agreement constitutes the entire agreement between you and
-          LearnUnit regarding your use of the website and supersedes all prior
+          LearnWiz regarding your use of the website and supersedes all prior
           and contemporaneous written or oral agreements between you and
-          LearnUnit.
+          LearnWiz.
         </Text>
         <Text>
           You may be subject to additional terms and conditions that apply when
-          you use or purchase other LearnUnit's services, which LearnUnit will
+          you use or purchase other LearnWiz's services, which LearnWiz will
           provide to you at the time of such use or purchase.
         </Text>
         <Heading as="h2" fontSize="2xl">
@@ -261,12 +260,12 @@ const TermsAndConditions = () => {
           The website and its entire contents, features and functionality
           (including but not limited to all information, software, text,
           displays, images, video and audio, and the design, selection and
-          arrangement thereof), are owned by LearnUnit, its licensors or other
+          arrangement thereof), are owned by LearnWiz, its licensors or other
           providers of such material and are protected by IL and international
           copyright, trademark, patent, trade secret and other intellectual
           property or proprietary rights laws. The material may not be copied,
           modified, reproduced, downloaded or distributed in any way, in whole
-          or in part, without the express prior written permission of LearnUnit,
+          or in part, without the express prior written permission of LearnWiz,
           unless and except as is expressly provided in these Terms &
           Conditions. Any unauthorized use of the material is prohibited.
         </Text>
