@@ -20,5 +20,5 @@ const store = configureStore({
 
 export default store;
 
-// export const server = 'http://localhost:5000/api/v1';
-export const server = 'https://tiny-ruby-bear-sari.cyclic.cloud/api/v1';
+export const server = process.env.REACT_APP_SERVER;
+// export const server = 'https://tiny-ruby-bear-sari.cyclic.cloud/api/v1';
