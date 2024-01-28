@@ -12,10 +12,10 @@ import {
   HStack,
   SimpleGrid,
   Text,
-  Link,
   useColorModeValue,
   Heading,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 // list header component
 
@@ -72,23 +72,23 @@ const Footer = () => {
           </VStack>
           <VStack align={'flex-start'} color={'whiteAlpha.700'}>
             <ListHeader>Profile</ListHeader>
-            <Link href={'/about'}>About Us</Link>
-            <Link href={'/admin/dashboard'}>DashBoard</Link>
-            <Link href={'/profile'}>My Account</Link>
+            <Link to={'/about'}>About Us</Link>
+            <Link to={'/admin/dashboard'}>DashBoard</Link>
+            <Link to={'/profile'}>My Account</Link>
           </VStack>
 
           <VStack align={'flex-start'} color={'whiteAlpha.700'}>
             <ListHeader>Product</ListHeader>
-            <Link href={'/subscribe'}>Our Prices</Link>
-            <Link href={'/allcourses'}>All Course</Link>
-            <Link href={'/request'}>Request A Course</Link>
+            <Link to={'/subscribe'}>Our Prices</Link>
+            <Link to={'/allcourses'}>All Course</Link>
+            <Link to={'/request'}>Request A Course</Link>
           </VStack>
 
           <VStack align={'flex-start'} color={'whiteAlpha.700'}>
             <ListHeader>Legal</ListHeader>
-            <Link href={'/privacypolicy'}>Privacy Policy</Link>
-            <Link href={'/termscondition'}>Terms of Service</Link>
-            <Link href={'/refundpolicy'}>Refund and Other</Link>
+            <Link to={'/privacypolicy'}>Privacy Policy</Link>
+            <Link to={'/termscondition'}>Terms of Service</Link>
+            <Link to={'/refundpolicy'}>Refund and Other</Link>
           </VStack>
         </SimpleGrid>
       </Stack>
