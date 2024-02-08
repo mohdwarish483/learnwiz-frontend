@@ -30,7 +30,7 @@ import {
   removeFromPlaylist,
   updateProfilePicture,
 } from '../../redux/actions/profile';
-import { loadUser } from '../../redux/actions/user';
+import { cancelSubscription, loadUser } from '../../redux/actions/user';
 import { toast } from 'react-toastify';
 
 // modal for change photo function
@@ -109,6 +109,11 @@ const Profile = ({ user }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { loading, message, error } = useSelector(state => state.profile);
+  const {
+    loading: subscriptionLoading,
+    message: subscriptionMessage,
+    error: subscriptionError,
+  } = useSelector(state => state.subscription);
 
   // changeImageSubmitHandler
   const changeImageSubmitHandler = async (e, image) => {
@@ -128,7 +133,29 @@ const Profile = ({ user }) => {
       toast.success(message);
       dispatch({ type: 'clearMessage' });
     }
-  }, [dispatch, error, message, navigate]);
+    if (subscriptionError) {
+      toast.error(subscriptionError);
+      dispatch({ type: 'clearError' });
+    }
+    if (subscriptionMessage) {
+      toast.success(subscriptionMessage);
+      dispatch({ type: 'clearMessage' });
+      dispatch(loadUser());
+    }
+  }, [
+    dispatch,
+    error,
+    message,
+    navigate,
+    subscriptionError,
+    subscriptionMessage,
+  ]);
+
+  // cancel handler
+
+  const cancelSubscriptionHandler = async () => {
+    dispatch(cancelSubscription());
+  };
 
   // playlist handler
 
@@ -137,6 +164,7 @@ const Profile = ({ user }) => {
     await dispatch(removeFromPlaylist(id));
     dispatch(loadUser());
   };
+
   return (
     <Stack className="backcolor" width={'100vw'} mt={'10vh'}>
       <Container maxW={'container.lg'} minH={'95vh'} py={'8'}>
@@ -184,7 +212,9 @@ const Profile = ({ user }) => {
                     flex={1}
                     colorScheme={'red'}
                     rounded={'full'}
+                    isLoading={subscriptionLoading}
                     className="shady-secondary"
+                    onClick={cancelSubscriptionHandler}
                   >
                     Cancel Subscription
                   </Button>

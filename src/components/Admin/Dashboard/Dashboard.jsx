@@ -6,7 +6,6 @@ import {
   Progress,
   Stack,
   Text,
-
 } from '@chakra-ui/react';
 import React from 'react';
 import { RiArrowDownLine, RiArrowUpLine } from 'react-icons/ri';

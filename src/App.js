@@ -19,7 +19,6 @@ import CourseDisplay from './components/CourseDetail/CourseDisplay';
 import Profile from './components/Profile/Profile';
 import UpdateProfile from './components/Profile/UpdateProfile';
 import ChangePassword from './components/Profile/ChangePassword';
-import Dashboard from './components/Admin/Dashboard/Dashboard';
 import CreateCourse from './components/Admin/CreateCourse/CreateCourse';
 import AdminCourses from './components/Admin/AdminCourses/AdminCourses';
 import Users from './components/Admin/Users/Users';
@@ -32,6 +31,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { loadUser } from './redux/actions/user';
 import { ProtectedRoute } from 'protected-route-react';
 import Loader from './components/Layout/Loader/Loader';
+import Dashboard from './components/Admin/Dashboard/Dashboard';
 
 function App() {
   const { isAuthenticated, user, error, message, loading } = useSelector(
@@ -68,14 +68,15 @@ function App() {
             <Route
               path="/admin/dashboard"
               element={
-                <ProtectedRoute
-                  isAuthenticated={isAuthenticated}
-                  adminRoute={true}
-                  isAdmin={user && user.role === 'admin'}
-                  redirectAdmin="/profile"
-                >
-                  <Dashboard />
-                </ProtectedRoute>
+                // <ProtectedRoute
+                //   isAuthenticated={isAuthenticated}
+                //   adminRoute={true}
+                //   isAdmin={user && user.role !== 'admin'}
+                //   redirectAdmin="/profile"
+                // >
+                //   <Dashboard />
+                // </ProtectedRoute>
+                <Dashboard />
               }
             />
             <Route
@@ -203,7 +204,17 @@ function App() {
 
             {/* other routes  */}
             <Route path="/allcourses" element={<Courses />} />
-            <Route path="/course/:id" element={<CourseDisplay />} />
+            <Route
+              path="/course/:id"
+              element={
+                <ProtectedRoute
+                  isAuthenticated={isAuthenticated}
+                  redirect="/profile"
+                >
+                  <CourseDisplay user={user} />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
